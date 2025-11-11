@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Treedom/static/css/main.a3816417.css",
+    "main.js": "/Treedom/static/js/main.d73b4e6e.js",
+    "static/js/453.117b0875.chunk.js": "/Treedom/static/js/453.117b0875.chunk.js",
+    "static/media/biodiversity.jpg": "/Treedom/static/media/biodiversity.6134babf536fb2b627c1.jpg",
+    "static/media/plant.jpg": "/Treedom/static/media/plant.41d09a6c7a97c9d3afdf.jpg",
+    "static/media/mango.jpg": "/Treedom/static/media/mango.c89ef813310f18a42f6d.jpg",
+    "static/media/bird.jpg": "/Treedom/static/media/bird.59910b2f430a6183c393.jpg",
+    "static/media/gender-equality.jpg": "/Treedom/static/media/gender-equality.19e43c96cff0176bbf7a.jpg",
+    "static/media/food-security.jpg": "/Treedom/static/media/food-security.f7dd902ca83894d0a218.jpg",
+    "static/media/forest-bg.jpg": "/Treedom/static/media/forest-bg.e088ed5e41fafcf64adc.jpg",
+    "static/media/regenerate.jpg": "/Treedom/static/media/regenerate.c7bbfdc8133307576fb5.jpg",
+    "index.html": "/Treedom/index.html",
+    "main.a3816417.css.map": "/Treedom/static/css/main.a3816417.css.map",
+    "main.d73b4e6e.js.map": "/Treedom/static/js/main.d73b4e6e.js.map",
+    "453.117b0875.chunk.js.map": "/Treedom/static/js/453.117b0875.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a3816417.css",
+    "static/js/main.d73b4e6e.js"
+  ]
+}

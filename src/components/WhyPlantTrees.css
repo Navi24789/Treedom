@@ -1,0 +1,96 @@
+.why-plant-section {
+  text-align: center;
+  padding: 70px 10px;
+  background: #f5f9f5;
+  font-family: "Poppins", sans-serif;
+}
+
+.why-plant-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.why-plant-section p {
+  font-size: 1.2rem;
+  color: #16a34a;
+  margin-bottom: 40px;
+}
+
+/* ==== GRID ==== */
+.why-plant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+/* ==== CARD ==== */
+.why-plant-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 320px;
+  height: 420px;
+  cursor: pointer;
+  transition: transform 0.5s ease, box-shadow 0.4s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.why-plant-card:hover {
+  transform: scale(1.03);
+}
+
+/* ==== IMAGE ==== */
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.why-plant-card:hover .card-img {
+  transform: scale(1.1);
+}
+
+/* ==== OVERLAY ==== */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.1));
+  color: white;
+  text-align: left;
+}
+
+.card-overlay h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-overlay p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #e5e5e5;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  .why-plant-section h2 {
+    font-size: 2rem;
+  }
+
+  .why-plant-section p {
+    font-size: 1rem;
+  }
+
+  .why-plant-card {
+    max-width: 100%;
+    height: 380px;
+  }
+}

@@ -1,0 +1,143 @@
+.why-choose {
+  background-color: #fafafa;
+  text-align: center;
+  padding: 5rem 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.why-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 3rem;
+}
+
+/* Feature Cards Grid */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto 5rem;
+}
+
+.why-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* ICONS COLORS */
+.icon {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.globe {
+  background: linear-gradient(135deg, #2f80ed, #56ccf2);
+}
+
+.camera {
+  background: linear-gradient(135deg, #f2994a, #f2c94c);
+}
+
+.hands {
+  background: linear-gradient(135deg, #27ae60, #6fcf97);
+}
+
+.gift {
+  background: linear-gradient(135deg, #eb5757, #f2994a);
+}
+
+.recycle {
+  background: linear-gradient(135deg, #219653, #6fcf97);
+}
+
+.leaf {
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+}
+
+.why-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.6rem;
+}
+
+.why-card p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* HOW IT WORKS SECTION */
+.how-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.how-section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 2rem;
+}
+
+.how-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.step-card {
+  width: 200px;
+  text-align: center;
+}
+
+.step-number {
+  background-color: #22c55e;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.step-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.4rem;
+}
+
+.step-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+}

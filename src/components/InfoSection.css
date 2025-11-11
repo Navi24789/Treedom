@@ -1,0 +1,47 @@
+.info-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.info-section h2 {
+  font-size: 2rem;
+  color: #14532d;
+  margin-bottom: 40px;
+}
+
+.info-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #14532d;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}

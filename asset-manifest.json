@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Treedom/static/css/main.a3816417.css",
-    "main.js": "/Treedom/static/js/main.d73b4e6e.js",
+    "main.js": "/Treedom/static/js/main.fc72582a.js",
     "static/js/453.117b0875.chunk.js": "/Treedom/static/js/453.117b0875.chunk.js",
     "static/media/biodiversity.jpg": "/Treedom/static/media/biodiversity.6134babf536fb2b627c1.jpg",
     "static/media/plant.jpg": "/Treedom/static/media/plant.41d09a6c7a97c9d3afdf.jpg",
@@ -13,11 +13,11 @@
     "static/media/regenerate.jpg": "/Treedom/static/media/regenerate.c7bbfdc8133307576fb5.jpg",
     "index.html": "/Treedom/index.html",
     "main.a3816417.css.map": "/Treedom/static/css/main.a3816417.css.map",
-    "main.d73b4e6e.js.map": "/Treedom/static/js/main.d73b4e6e.js.map",
+    "main.fc72582a.js.map": "/Treedom/static/js/main.fc72582a.js.map",
     "453.117b0875.chunk.js.map": "/Treedom/static/js/453.117b0875.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a3816417.css",
-    "static/js/main.d73b4e6e.js"
+    "static/js/main.fc72582a.js"
   ]
 }

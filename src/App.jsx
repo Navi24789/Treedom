@@ -7,14 +7,16 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <Router>
+    // ✅ Add basename for GitHub Pages
+    <Router basename="/Treedom">
       <Navbar />
       
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
       </Routes>
-      <Footer/>
+
+      <Footer />
     </Router>
   );
 }

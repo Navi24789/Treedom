@@ -56,8 +56,9 @@
   margin-top: 0.4rem;
 }
 
+/* --- Main Option Buttons --- */
 .register-options {
-  margin: 1.2rem 0;
+  margin: 1.5rem 0;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -93,19 +94,6 @@
 
 .btn.business:hover {
   background: #1b6136;
-}
-
-.footer {
-  margin-top: 1rem;
-}
-
-.footer h3 {
-  color: #155724;
-}
-
-.footer p {
-  font-size: 0.9rem;
-  color: #555;
 }
 
 .btn.signin {
@@ -150,23 +138,6 @@
   background: #f2f2f2;
 }
 
-.go-back-btn {
-  width: 100%;
-  padding: 0.8rem;
-  border-radius: 8px;
-  border: 2px solid #28a745;
-  background: transparent;
-  color: #28a745;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.go-back-btn:hover {
-  background: #28a745;
-  color: white;
-}
-
 /* ===== Responsive ===== */
 @media (max-width: 500px) {
   .register-box {
@@ -174,7 +145,8 @@
     padding: 1.5rem;
   }
 
-  .btn, .social-btn, .go-back-btn {
+  .btn,
+  .social-btn {
     font-size: 0.95rem;
   }
 }

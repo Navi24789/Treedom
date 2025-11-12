@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./RegisterModal.css";
 import { X, ArrowLeft, User, Building2, LogIn } from "lucide-react";
 
 export default function RegisterModal({ isOpen, onClose }) {
   const [step, setStep] = useState("choose"); // choose | create
+
+  // 🟢 Reset step to "choose" whenever modal opens
+  useEffect(() => {
+    if (isOpen) setStep("choose");
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -12,16 +17,19 @@ export default function RegisterModal({ isOpen, onClose }) {
       <div className="register-box" onClick={(e) => e.stopPropagation()}>
         {step === "choose" ? (
           <>
+            {/* Close Button */}
             <button className="close-btn" onClick={onClose}>
               <X size={20} />
             </button>
 
+            {/* Header */}
             <div className="register-header">
               <span className="emoji">🐶</span>
               <h2>I don’t have an account.</h2>
               <p>🌱🌍 Join us: Together, we make Earth greener!</p>
             </div>
 
+            {/* Buttons */}
             <div className="register-options">
               <button className="btn user" onClick={() => setStep("create")}>
                 <User size={18} /> Register as a user
@@ -29,13 +37,6 @@ export default function RegisterModal({ isOpen, onClose }) {
               <button className="btn business" onClick={() => setStep("create")}>
                 <Building2 size={18} /> Register as a business
               </button>
-            </div>
-
-            <hr />
-
-            <div className="footer">
-              <h3>I have an account</h3>
-              <p>You are already part of our community</p>
               <button className="btn signin" onClick={() => setStep("create")}>
                 <LogIn size={18} /> Sign In
               </button>
@@ -43,6 +44,7 @@ export default function RegisterModal({ isOpen, onClose }) {
           </>
         ) : (
           <>
+            {/* Close & Back Buttons */}
             <button className="close-btn" onClick={onClose}>
               <X size={20} />
             </button>
@@ -50,6 +52,7 @@ export default function RegisterModal({ isOpen, onClose }) {
               <ArrowLeft size={18} />
             </button>
 
+            {/* Header */}
             <div className="register-header">
               <h2>Create your profile</h2>
               <p>
@@ -58,6 +61,7 @@ export default function RegisterModal({ isOpen, onClose }) {
               </p>
             </div>
 
+            {/* Social Buttons */}
             <div className="social-buttons">
               <button className="social-btn google">
                 <img
@@ -88,10 +92,6 @@ export default function RegisterModal({ isOpen, onClose }) {
                 Continue with email
               </button>
             </div>
-
-            <button className="go-back-btn" onClick={() => setStep("choose")}>
-              Go Back
-            </button>
           </>
         )}
       </div>

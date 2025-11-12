@@ -22,9 +22,9 @@ const Footer = () => {
         <div className="footer-column">
           <h4>Plant</h4>
           <ul>
-            <li><a href="#">Plant and gift</a></li>
-            <li><a href="#">Activate subscription</a></li>
-            <li><a href="#">Grow your own Forest</a></li>
+            <li><a href="/plant">Plant and gift</a></li>
+            <li><a href="/subscription">Activate subscription</a></li>
+            <li><a href="/forest">Grow your own Forest</a></li>
           </ul>
         </div>
 
@@ -32,13 +32,13 @@ const Footer = () => {
         <div className="footer-column">
           <h4>Need help?</h4>
           <ul>
-            <li><a href="#">Customer Care</a></li>
-            <li><a href="#">Contacts</a></li>
-            <li><a href="#">Register of trees</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Cookie usage</a></li>
-            <li><a href="#">Whistleblowing</a></li>
-            <li><a href="#">Accessibility statement</a></li>
+            <li><a href="/support">Customer Care</a></li>
+            <li><a href="/contact">Contacts</a></li>
+            <li><a href="/trees">Register of trees</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/cookies">Cookie usage</a></li>
+            <li><a href="/whistleblowing">Whistleblowing</a></li>
+            <li><a href="/accessibility">Accessibility statement</a></li>
           </ul>
         </div>
 
@@ -46,10 +46,10 @@ const Footer = () => {
         <div className="footer-social">
           <h4>Social</h4>
           <div className="social-icons">
-            <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-            <a href="#" aria-label="Instagram"><FaInstagram /></a>
-            <a href="#" aria-label="YouTube"><FaYoutube /></a>
-            <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF /></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube /></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
           </div>
         </div>
       </div>

@@ -3,12 +3,28 @@ import "./RegisterModal.css";
 import { X, ArrowLeft, User, Building2, LogIn } from "lucide-react";
 
 export default function RegisterModal({ isOpen, onClose }) {
-  const [step, setStep] = useState("choose"); // choose | create
+  const [step, setStep] = useState("choose");
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
 
-  // 🟢 Reset step to "choose" whenever modal opens
   useEffect(() => {
-    if (isOpen) setStep("choose");
+    if (isOpen) {
+      setStep("choose");
+      setLoading(false);
+      setMessage("");
+    }
   }, [isOpen]);
+
+  const handleFakeLogin = (provider) => {
+    setLoading(true);
+    setMessage(`Connecting to ${provider}...`);
+
+    setTimeout(() => {
+      setLoading(false);
+      setMessage(`✅ Signed in successfully with ${provider}!`);
+      setTimeout(() => onClose(), 1500);
+    }, 2000);
+  };
 
   if (!isOpen) return null;
 
@@ -17,19 +33,16 @@ export default function RegisterModal({ isOpen, onClose }) {
       <div className="register-box" onClick={(e) => e.stopPropagation()}>
         {step === "choose" ? (
           <>
-            {/* Close Button */}
             <button className="close-btn" onClick={onClose}>
               <X size={20} />
             </button>
 
-            {/* Header */}
             <div className="register-header">
-              <span className="emoji">🐶</span>
+              <span className="emoji">🌱</span>
               <h2>I don’t have an account.</h2>
-              <p>🌱🌍 Join us: Together, we make Earth greener!</p>
+              <p>Join us and make Earth greener!</p>
             </div>
 
-            {/* Buttons */}
             <div className="register-options">
               <button className="btn user" onClick={() => setStep("create")}>
                 <User size={18} /> Register as a user
@@ -44,7 +57,6 @@ export default function RegisterModal({ isOpen, onClose }) {
           </>
         ) : (
           <>
-            {/* Close & Back Buttons */}
             <button className="close-btn" onClick={onClose}>
               <X size={20} />
             </button>
@@ -52,46 +64,69 @@ export default function RegisterModal({ isOpen, onClose }) {
               <ArrowLeft size={18} />
             </button>
 
-            {/* Header */}
             <div className="register-header">
               <h2>Create your profile</h2>
-              <p>
-                By creating a profile on AdopTree you will have easy access to
-                your trees, monitor your impact and share it.
-              </p>
+              <p>Access your trees, track your impact, and share your story 🌍</p>
             </div>
 
-            {/* Social Buttons */}
             <div className="social-buttons">
-              <button className="social-btn google">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
-                  alt="Google"
-                />
-                Continue with Google
-              </button>
-              <button className="social-btn facebook">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png"
-                  alt="Facebook"
-                />
-                Continue with Facebook
-              </button>
-              <button className="social-btn apple">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/179/179309.png"
-                  alt="Apple"
-                />
-                Continue with Apple
-              </button>
-              <button className="social-btn email">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/561/561127.png"
-                  alt="Email"
-                />
-                Continue with email
-              </button>
+              {loading ? (
+                <div className="loading">
+                  <div className="spinner"></div>
+                  <p>{message}</p>
+                </div>
+              ) : (
+                <>
+                  <button
+                    className="social-btn google"
+                    onClick={() => handleFakeLogin("Google")}
+                  >
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
+                      alt="Google"
+                    />
+                    Continue with Google
+                  </button>
+
+                  <button
+                    className="social-btn facebook"
+                    onClick={() => handleFakeLogin("Facebook")}
+                  >
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png"
+                      alt="Facebook"
+                    />
+                    Continue with Facebook
+                  </button>
+
+                  <button
+                    className="social-btn apple"
+                    onClick={() => handleFakeLogin("Apple")}
+                  >
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/179/179309.png"
+                      alt="Apple"
+                    />
+                    Continue with Apple
+                  </button>
+
+                  <button
+                    className="social-btn email"
+                    onClick={() => handleFakeLogin("Email")}
+                  >
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/561/561127.png"
+                      alt="Email"
+                    />
+                    Continue with Email
+                  </button>
+                </>
+              )}
             </div>
+
+            {message && !loading && (
+              <p className="success-msg">{message}</p>
+            )}
           </>
         )}
       </div>

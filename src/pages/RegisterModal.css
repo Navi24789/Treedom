@@ -150,3 +150,59 @@
     font-size: 0.95rem;
   }
 }
+
+
+
+/* Loading Spinner */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  color: #155724;
+}
+
+.spinner {
+  width: 30px;
+  height: 30px;
+  border: 4px solid #cdeccf;
+  border-top-color: #28a745;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.success-msg {
+  color: #1b5e20;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+/* Make modal responsive */
+@media (max-width: 500px) {
+  .register-box {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .btn,
+  .social-btn {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+
+  .register-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .register-header p {
+    font-size: 0.85rem;
+  }
+}
